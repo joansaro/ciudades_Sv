@@ -1,0 +1,26 @@
+<div class="container" *ngIf="citie">
+
+    <div class="image">
+        <img src="{{url +'get-image/' + citie.image}}"  *ngIf="citie.image">
+    </div>
+    <div class="data">
+        <h1> {{citie.name}} </h1>
+        <h3> Departamento: {{citie.departmen}} </h3>
+        <p> Descripcion: {{citie.description}}</p>
+
+        <p *ngIf="confirm == false">
+            <a [routerLink]="['/edit-citie', citie._id]"  class="button-edit">Editar</a>
+            <a (click)="setConfirm(true)" class="button-delete">Borrar</a>
+        </p>
+
+        <p *ngIf="confirm == true">
+            <span class="confirm"> ¿Esta seguro que desea eliminar esta ciudad? </span>
+            <a (click)="setConfirm(false)"  class="button-edit">Cancelar</a>
+            <a (click)="deleteCitie(citie._id)" class="button-delete">Borrar</a>
+        </p>
+    </div>
+
+
+
+
+</div>

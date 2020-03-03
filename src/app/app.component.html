@@ -1,0 +1,18 @@
+<h1 id="portada">Cities of El Salvador.</h1>
+
+<header>
+  <ul>
+    <li><a [routerLink]="['home']" [routerLinkActive]= "['actived']" >Inicio</a></li>
+    <li><a [routerLink]="['cities']" [routerLinkActive]= "['actived']">Ciudades</a></li>
+    <li><a [routerLink]="['create']" [routerLinkActive]= "['actived']">Agregar ciudad</a></li>
+
+  </ul>
+</header>
+
+<section id="contenido">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Cities of El Salvador - Joansaro&copy; 2020
+</footer>

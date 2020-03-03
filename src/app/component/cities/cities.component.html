@@ -1,0 +1,19 @@
+<div id="conten">
+    <h2 class="ciudades">Ciudades.</h2>
+
+    <ul>
+        <li class='city' *ngFor = "let city of citie">
+            
+            <a [routerLink]="['/citie', city._id]">
+                <div class="image">
+                    <img src="{{url +'get-image/' + city.image}}"  *ngIf="city.image">
+                </div>
+
+                <h3>{{city.name}}</h3>
+                <p>{{city.departmen}}</p> 
+                <p>{{city.description}}</p>
+                
+            </a>
+        </li>
+    </ul>
+</div>
